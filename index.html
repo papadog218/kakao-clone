@@ -67,8 +67,59 @@
         <h1>이론연습4</h1>
         <hr>
         <style>
-            .transform {margin-top: 80px; width: 500px; height: 500px; background-color: red; transform: rotate(20deg);}
+            .transform {
+                margin-top: 80px;
+                width: 500px; height: 500px;
+                background-color: red;
+                transition: all .5s ease-in-out;
+            }
+            .transform:hover {transform: rotate(1turn) scale(.5,.5);}
         </style>
         <div class="transform"></div>
+
+        <hr>
+        <h1>이론연습5</h1>
+        <hr>
+        <style>
+            .animation {
+                width: 100px;
+                height: 100px;
+                background: red;
+                animation: 5s scaleAndRotateSqu infinite ease-in-out;
+            }
+            @keyframes scaleAndRotateSqu {
+                0% {
+                    transform: none;
+                }
+                50% {
+                    transform: rotate(1turn) scale(.5,.5);
+                    color: white;
+                }
+                100% {
+                    transform: none;
+                    color: blue;
+                }
+            }
+            /* @keyframes scaleAndRotateSqu {
+                from {
+                    transform: none;
+                }
+                to {
+                    transform: rotate(1turn) scale(.5,.5);
+                }
+            } */
+        </style>
+        <div class="animation">26</div>
+
+        <hr>
+        <h1>이론연습6</h1>
+        <hr>
+        <style>
+            .media {background-color: green; width: 100%; height: 800px;}
+            @media screen and (min-width: 320px) and (max-width: 640px) {
+                .media {background-color: blue;}
+            }
+        </style>
+        <div class="media"></div>
     </body>
 </html>
